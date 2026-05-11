@@ -1,579 +1,403 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="pt">
 <head>
-  <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Termos e Condições — Julius</title>
-  <style type="text/css">
-    ol {
-      margin: 0;
-      padding: 0
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #1a1a1a;
+      background: #f9f9f9;
     }
 
-    table td,
-    table th {
-      padding: 8px 12px;
-      border: 1px solid #ddd;
-      font-size: 11pt;
-      font-family: "Arial"
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+      background: #fff;
+      min-height: 100vh;
     }
 
-    table th {
-      background-color: #f5f5f5;
-      font-weight: 700
+    /* Header */
+    .doc-header {
+      border-bottom: 2px solid #e5e5e5;
+      padding-bottom: 24px;
+      margin-bottom: 32px;
     }
 
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      margin: 12pt 0
-    }
-
-    .c2 {
-      padding-top: 18pt;
-      padding-bottom: 6pt;
-      line-height: 1.15;
-      page-break-after: avoid;
-      orphans: 2;
-      widows: 2;
-      text-align: left
-    }
-
-    .c1 {
-      color: #000000;
-      font-weight: 400;
-      text-decoration: none;
-      vertical-align: baseline;
-      font-size: 11pt;
-      font-family: "Arial";
-      font-style: normal
-    }
-
-    .c3 {
-      color: #000000;
-      font-weight: 400;
-      text-decoration: none;
-      vertical-align: baseline;
-      font-size: 16pt;
-      font-family: "Arial";
-      font-style: normal
-    }
-
-    .c8 {
-      color: #000000;
+    .doc-header h1 {
+      font-size: 26px;
       font-weight: 700;
+      letter-spacing: -0.3px;
+      color: #111;
+    }
+
+    .doc-header .meta {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #666;
+    }
+
+    /* Language nav */
+    .lang-nav {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .lang-nav a {
+      display: inline-block;
+      padding: 6px 16px;
+      border: 1px solid #d0d0d0;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #444;
       text-decoration: none;
-      vertical-align: baseline;
-      font-size: 11pt;
-      font-family: "Arial";
-      font-style: normal
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
     }
 
-    .c0 {
-      padding-top: 0pt;
-      padding-bottom: 0pt;
-      line-height: 1.15;
-      orphans: 2;
-      widows: 2;
-      text-align: left;
-      height: 11pt
+    .lang-nav a:hover {
+      background: #111;
+      color: #fff;
+      border-color: #111;
     }
 
-    .c7 {
-      padding-top: 0pt;
-      padding-bottom: 0pt;
-      line-height: 1.15;
-      orphans: 2;
-      widows: 2;
-      text-align: left
+    /* Language section */
+    .lang-section {
+      margin-bottom: 64px;
     }
 
-    .c4 {
-      background-color: #ffffff;
-      max-width: 468pt;
-      padding: 20pt 20pt 20pt 20pt
-    }
-
-    .c5 {
-      padding: 0;
-      margin: 0
-    }
-
-    .c6 {
-      margin-left: 36pt;
-      padding-top: 0pt;
-      padding-left: 0pt;
-      padding-bottom: 0pt;
-      line-height: 1.15;
-      orphans: 2;
-      widows: 2;
-      text-align: left
-    }
-
-    .title {
-      padding-top: 0pt;
-      color: #000000;
-      font-size: 26pt;
-      padding-bottom: 3pt;
-      font-family: "Arial";
-      line-height: 1.15;
-      page-break-after: avoid;
-      orphans: 2;
-      widows: 2;
-      text-align: left
-    }
-
-    li {
-      color: #000000;
-      font-size: 11pt;
-      font-family: "Arial"
-    }
-
-    p {
-      margin: 0;
-      color: #000000;
-      font-size: 11pt;
-      font-family: "Arial"
-    }
-
-    h1 {
-      padding-top: 20pt;
-      color: #000000;
-      font-size: 20pt;
-      padding-bottom: 6pt;
-      font-family: "Arial";
-      line-height: 1.15;
-      page-break-after: avoid;
-      orphans: 2;
-      widows: 2;
-      text-align: left
+    .lang-section + .lang-section {
+      padding-top: 48px;
+      border-top: 1px solid #e5e5e5;
     }
 
     h2 {
-      padding-top: 18pt;
-      color: #000000;
-      font-size: 16pt;
-      padding-bottom: 6pt;
-      font-family: "Arial";
-      line-height: 1.15;
-      page-break-after: avoid;
-      orphans: 2;
-      widows: 2;
-      text-align: left
+      font-size: 20px;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 28px;
+      padding: 10px 16px;
+      background: #f4f4f4;
+      border-radius: 8px;
+      letter-spacing: 0.2px;
     }
 
     h3 {
-      padding-top: 16pt;
-      color: #434343;
-      font-size: 14pt;
-      padding-bottom: 4pt;
-      font-family: "Arial";
-      line-height: 1.15;
-      page-break-after: avoid;
-      orphans: 2;
-      widows: 2;
-      text-align: left
+      font-size: 17px;
+      font-weight: 600;
+      color: #111;
+      margin-top: 36px;
+      margin-bottom: 12px;
     }
 
-    h4 {
-      padding-top: 14pt;
-      color: #666666;
-      font-size: 12pt;
-      padding-bottom: 4pt;
-      font-family: "Arial";
-      line-height: 1.15;
-      page-break-after: avoid;
-      orphans: 2;
-      widows: 2;
-      text-align: left
-    }
-
-    a {
-      color: #1155cc
+    p {
+      margin-bottom: 14px;
+      color: #333;
     }
 
     ul {
-      list-style-type: disc;
-      padding-left: 36pt;
-      margin: 6pt 0
+      margin: 12px 0 16px 20px;
+      color: #333;
     }
 
     ul li {
-      padding-bottom: 4pt;
-      line-height: 1.15
+      margin-bottom: 6px;
     }
 
-    /* Language tabs styles */
-    .language-tabs {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background: #ffffff;
-      border-bottom: 2px solid #e0e0e0;
-      padding: 10px 0;
-      z-index: 1000;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1)
-    }
-
-    .language-tabs-container {
-      max-width: 468pt;
-      margin: 0 auto;
-      padding: 0 20pt;
-      display: flex;
-      gap: 20px;
-      justify-content: center
-    }
-
-    .language-tab {
-      padding: 8px 16px;
-      background: #f5f5f5;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      cursor: pointer;
-      font-family: Arial, sans-serif;
-      font-size: 14px;
+    /* Sub-clauses (5.1, 5.2 …) */
+    .clause {
+      margin-bottom: 12px;
       color: #333;
-      transition: all 0.3s ease;
-      text-decoration: none
     }
 
-    .language-tab:hover {
-      background: #e8e8e8;
-      border-color: #bbb
+    .clause strong {
+      color: #111;
     }
 
-    .language-tab.active {
-      background: #007bff;
-      color: white;
-      border-color: #007bff
+    strong { color: #111; }
+
+    a {
+      color: #0066cc;
+      text-decoration: none;
     }
 
-    .content-wrapper {
-      margin-top: 80px
+    a:hover { text-decoration: underline; }
+
+    .contact-block {
+      margin-top: 20px;
+      padding: 16px 20px;
+      background: #f4f4f4;
+      border-radius: 8px;
+      font-size: 15px;
     }
 
-    .language-content {
-      display: none
-    }
+    hr { display: none; }
 
-    .language-content.active {
-      display: block
+    @media (max-width: 600px) {
+      .container { padding: 32px 16px 64px; }
+      .doc-header h1 { font-size: 22px; }
     }
   </style>
 </head>
+<body>
+<div class="container">
 
-<body class="c4 doc-content">
-  <!-- Language Tabs -->
-  <div class="language-tabs">
-    <div class="language-tabs-container">
-      <button class="language-tab active" onclick="switchLanguage('pt', event)">Português</button>
-      <button class="language-tab" onclick="switchLanguage('en', event)">English</button>
-      <button class="language-tab" onclick="switchLanguage('es', event)">Español</button>
-    </div>
+  <div class="doc-header">
+    <h1>Termos e Condições de Uso — Julius</h1>
+    <p class="meta">Última atualização: 4 de maio de 2026</p>
   </div>
 
-  <div class="content-wrapper">
+  <nav class="lang-nav">
+    <a href="#pt">Português</a>
+    <a href="#en">English</a>
+    <a href="#es">Español</a>
+  </nav>
 
-    <!-- Portuguese Content -->
-    <div id="content-pt" class="language-content active">
-      <h1 class="title">Termos e Condições de Uso — Julius</h1>
-      <p class="c7"><span class="c8">Última atualização:</span><span class="c1"> 17 de abril de 2026</span></p>
-      <p class="c0"><span class="c1"></span></p>
+  <!-- ───────────── PORTUGUÊS ───────────── -->
+  <section class="lang-section" id="pt">
+    <h2>Português</h2>
 
-      <h2 class="c2"><span class="c3">1. Aceitação dos Termos</span></h2>
-      <p class="c7"><span class="c1">Ao baixar, instalar ou usar o aplicativo Julius ("Aplicativo"), você concorda com estes Termos e Condições ("Termos"). Se você não concordar com estes Termos, não utilize o Aplicativo.</span></p>
-      <p class="c0"><span class="c1"></span></p>
+    <h3>1. Aceitação dos Termos</h3>
+    <p>Ao baixar, instalar ou usar o aplicativo Julius ("Aplicativo"), você concorda com estes Termos e Condições ("Termos"). Se você não concordar com estes Termos, não utilize o Aplicativo.</p>
 
-      <h2 class="c2"><span class="c3">2. Sobre o Aplicativo</span></h2>
-      <p class="c7"><span class="c1">Julius é um aplicativo de controle de orçamento pessoal que permite ao usuário registrar gastos, definir limites mensais e acompanhar seu desempenho financeiro diário. O Aplicativo é oferecido gratuitamente com recursos adicionais disponíveis por meio de assinatura paga ("Julius Pro").</span></p>
-      <p class="c0"><span class="c1"></span></p>
+    <h3>2. Sobre o Aplicativo</h3>
+    <p>Julius é um aplicativo de controle de orçamento pessoal que permite ao usuário registrar gastos, definir limites mensais e acompanhar seu desempenho financeiro diário. O Aplicativo é oferecido gratuitamente com recursos adicionais disponíveis por meio de assinatura paga ("Julius Pro").</p>
 
-      <h2 class="c2"><span class="c3">3. Uso Permitido</span></h2>
-      <p class="c7"><span class="c1">Você concorda em usar o Aplicativo apenas para fins pessoais e não comerciais, em conformidade com estes Termos e com todas as leis e regulamentos aplicáveis. É proibido:</span></p>
-      <ul class="c5">
-        <li class="c6"><span class="c1">Reproduzir, modificar, distribuir ou criar obras derivadas do Aplicativo sem autorização expressa;</span></li>
-        <li class="c6"><span class="c1">Tentar acessar, modificar ou interferir nos servidores ou infraestrutura do Aplicativo;</span></li>
-        <li class="c6"><span class="c1">Usar o Aplicativo para qualquer finalidade ilegal ou não autorizada;</span></li>
-        <li class="c6"><span class="c1">Fazer engenharia reversa, descompilar ou desmontar o Aplicativo.</span></li>
-      </ul>
-      <p class="c0"><span class="c1"></span></p>
+    <h3>3. Uso Permitido</h3>
+    <p>Você concorda em usar o Aplicativo apenas para fins pessoais e não comerciais, em conformidade com estes Termos e com todas as leis e regulamentos aplicáveis. É proibido:</p>
+    <ul>
+      <li>Reproduzir, modificar, distribuir ou criar obras derivadas do Aplicativo sem autorização expressa;</li>
+      <li>Tentar acessar, modificar ou interferir nos servidores ou infraestrutura do Aplicativo;</li>
+      <li>Usar o Aplicativo para qualquer finalidade ilegal ou não autorizada;</li>
+      <li>Fazer engenharia reversa, descompilar ou desmontar o Aplicativo.</li>
+    </ul>
 
-      <h2 class="c2"><span class="c3">4. Conta e Autenticação</span></h2>
-      <p class="c7"><span class="c1">O Aplicativo oferece autenticação opcional via Google Sign-In, integrada ao Firebase Authentication. Você é responsável por manter a confidencialidade das suas credenciais de acesso e por todas as atividades realizadas com sua conta. Caso identifique uso não autorizado, entre em contato imediatamente pelo e-mail indicado na seção de Contato.</span></p>
-      <p class="c7"><span class="c1">O uso de autenticação é opcional. Sem login, os dados são armazenados localmente no dispositivo e não sincronizados com a nuvem.</span></p>
-      <p class="c0"><span class="c1"></span></p>
+    <h3>4. Conta e Autenticação</h3>
+    <p>O Aplicativo oferece autenticação opcional via Google Sign-In, integrada ao Firebase Authentication. Você é responsável por manter a confidencialidade das suas credenciais de acesso e por todas as atividades realizadas com sua conta. Caso identifique uso não autorizado, entre em contato imediatamente pelo e-mail indicado na seção de Contato.</p>
+    <p>O uso de autenticação é opcional. Sem login, os dados são armazenados localmente no dispositivo e não sincronizados com a nuvem.</p>
 
-      <h2 class="c2"><span class="c3">5. Assinatura Julius Pro</span></h2>
-      <p class="c7"><span class="c1">O Julius Pro oferece recursos premium acessíveis mediante assinatura paga. As seguintes condições se aplicam:</span></p>
-      <p class="c7"><span class="c8">5.1 Planos disponíveis:</span><span class="c1"> Mensal, Anual e Vitalício. Os preços são exibidos no Aplicativo e podem variar por região.</span></p>
-      <p class="c7"><span class="c8">5.2 Cobrança:</span><span class="c1"> O pagamento é processado pela Apple App Store ou Google Play Store, conforme a plataforma utilizada. A cobrança é realizada no momento da confirmação da compra.</span></p>
-      <p class="c7"><span class="c8">5.3 Renovação automática:</span><span class="c1"> Assinaturas mensais e anuais são renovadas automaticamente ao final de cada período, salvo cancelamento pelo usuário com pelo menos 24 horas de antecedência do término do período vigente.</span></p>
-      <p class="c7"><span class="c8">5.4 Cancelamento:</span><span class="c1"> Você pode cancelar a assinatura a qualquer momento pelas configurações da sua conta na App Store ou Google Play. O cancelamento entra em vigor ao final do período já pago, sem reembolso proporcional.</span></p>
-      <p class="c7"><span class="c8">5.5 Reembolsos:</span><span class="c1"> Solicitações de reembolso devem ser feitas diretamente à Apple ou ao Google, conforme a política de cada loja. O desenvolvedor do Aplicativo não processa reembolsos diretamente.</span></p>
-      <p class="c7"><span class="c8">5.6 Período de teste:</span><span class="c1"> Quando disponível, o período de avaliação gratuito converte-se automaticamente em assinatura paga ao término, salvo cancelamento antes do encerramento do período de teste.</span></p>
-      <p class="c0"><span class="c1"></span></p>
+    <h3>5. Assinatura Julius Pro</h3>
+    <p>O Julius Pro oferece recursos premium acessíveis mediante assinatura paga. As seguintes condições se aplicam:</p>
+    <p class="clause"><strong>5.1 Planos disponíveis:</strong> Mensal, Anual e Vitalício. Os preços são exibidos no Aplicativo e podem variar por região.</p>
+    <p class="clause"><strong>5.2 Cobrança:</strong> O pagamento é processado pela Apple App Store ou Google Play Store, conforme a plataforma utilizada. A cobrança é realizada no momento da confirmação da compra.</p>
+    <p class="clause"><strong>5.3 Renovação automática:</strong> Assinaturas mensais e anuais são renovadas automaticamente ao final de cada período, salvo cancelamento pelo usuário com pelo menos 24 horas de antecedência do término do período vigente.</p>
+    <p class="clause"><strong>5.4 Cancelamento:</strong> Você pode cancelar a assinatura a qualquer momento pelas configurações da sua conta na App Store ou Google Play. O cancelamento entra em vigor ao final do período já pago, sem reembolso proporcional.</p>
+    <p class="clause"><strong>5.5 Reembolsos:</strong> Solicitações de reembolso devem ser feitas diretamente à Apple ou ao Google, conforme a política de cada loja. O desenvolvedor do Aplicativo não processa reembolsos diretamente.</p>
+    <p class="clause"><strong>5.6 Período de avaliação gratuita:</strong> Novos usuários recebem 7 dias de acesso gratuito ao Julius Pro ao iniciar a avaliação no Aplicativo. Ao término do período, o acesso premium é encerrado e o usuário pode optar por assinar um dos planos disponíveis. O período de avaliação <strong>não</strong> é convertido automaticamente em assinatura paga. Cada conta pode utilizar o período de avaliação uma única vez.</p>
 
-      <h2 class="c2"><span class="c3">6. Sincronização na Nuvem e Dados</span></h2>
-      <p class="c7"><span class="c1">A funcionalidade de sincronização na nuvem é opcional e requer ativação explícita pelo usuário. Quando habilitada:</span></p>
-      <ul class="c5">
-        <li class="c6"><span class="c1">Os dados de gastos são armazenados no Firebase Firestore, operado pelo Google LLC;</span></li>
-        <li class="c6"><span class="c1">Os dados são vinculados à sua conta Google e podem ser acessados em múltiplos dispositivos;</span></li>
-        <li class="c6"><span class="c1">O usuário pode desativar a sincronização a qualquer momento nas configurações do Aplicativo.</span></li>
-      </ul>
-      <p class="c7"><span class="c1">Sem a sincronização habilitada, todos os dados permanecem exclusivamente no dispositivo local.</span></p>
-      <p class="c0"><span class="c1"></span></p>
+    <h3>6. Sincronização na Nuvem e Dados</h3>
+    <p>A funcionalidade de sincronização na nuvem é opcional e requer ativação explícita pelo usuário. Quando habilitada:</p>
+    <ul>
+      <li>Os dados de gastos são armazenados no Firebase Firestore, operado pelo Google LLC;</li>
+      <li>Os dados são vinculados à sua conta Google e podem ser acessados em múltiplos dispositivos;</li>
+      <li>O usuário pode desativar a sincronização a qualquer momento nas configurações do Aplicativo.</li>
+    </ul>
+    <p>Sem a sincronização habilitada, todos os dados permanecem exclusivamente no dispositivo local.</p>
 
-      <h2 class="c2"><span class="c3">7. Publicidade</span></h2>
-      <p class="c7"><span class="c1">A versão gratuita do Aplicativo pode exibir anúncios fornecidos pelo Google AdMob. Ao usar a versão gratuita, você consente com a exibição desses anúncios. A assinatura Julius Pro remove todos os anúncios.</span></p>
-      <p class="c0"><span class="c1"></span></p>
+    <h3>7. Publicidade</h3>
+    <p>A versão gratuita do Aplicativo pode exibir anúncios fornecidos pelo Google AdMob. Ao usar a versão gratuita, você consente com a exibição desses anúncios. A assinatura Julius Pro remove todos os anúncios.</p>
 
-      <h2 class="c2"><span class="c3">8. Privacidade</span></h2>
-      <p class="c7"><span class="c1">O uso do Aplicativo está sujeito à nossa Política de Privacidade, que descreve como coletamos, usamos e protegemos suas informações pessoais. Ao usar o Aplicativo, você consente com as práticas descritas na Política de Privacidade.</span></p>
-      <p class="c7"><span class="c8">Dados coletados incluem:</span></p>
-      <ul class="c5">
-        <li class="c6"><span class="c1">Dados de gastos inseridos pelo usuário (armazenados localmente e, opcionalmente, na nuvem);</span></li>
-        <li class="c6"><span class="c1">Identificador de conta Google (quando o login é utilizado);</span></li>
-        <li class="c6"><span class="c1">Dados de uso e diagnóstico para melhoria do Aplicativo (via Firebase Analytics);</span></li>
-        <li class="c6"><span class="c1">Dados de publicidade (via Google AdMob, na versão gratuita).</span></li>
-      </ul>
-      <p class="c7"><span class="c1">O Aplicativo não vende dados pessoais a terceiros.</span></p>
-      <p class="c0"><span class="c1"></span></p>
+    <h3>8. Privacidade</h3>
+    <p>O uso do Aplicativo está sujeito à nossa Política de Privacidade, que descreve como coletamos, usamos e protegemos suas informações pessoais. Ao usar o Aplicativo, você consente com as práticas descritas na Política de Privacidade.</p>
+    <p><strong>Dados coletados incluem:</strong></p>
+    <ul>
+      <li>Dados de gastos inseridos pelo usuário (armazenados localmente e, opcionalmente, na nuvem);</li>
+      <li>Identificador de conta Google (quando o login é utilizado);</li>
+      <li>Dados de uso e diagnóstico para melhoria do Aplicativo (via Firebase Analytics);</li>
+      <li>Dados de publicidade (via Google AdMob, na versão gratuita).</li>
+    </ul>
+    <p>O Aplicativo não vende dados pessoais a terceiros.</p>
 
-      <h2 class="c2"><span class="c3">9. Propriedade Intelectual</span></h2>
-      <p class="c7"><span class="c1">Todo o conteúdo do Aplicativo, incluindo código-fonte, design, logotipo, texto e funcionalidades, é de propriedade exclusiva do desenvolvedor e está protegido pelas leis de direitos autorais e propriedade intelectual aplicáveis. Estes Termos não concedem ao usuário nenhum direito sobre a propriedade intelectual do Aplicativo além da licença limitada de uso descrita aqui.</span></p>
-      <p class="c0"><span class="c1"></span></p>
+    <h3>9. Propriedade Intelectual</h3>
+    <p>Todo o conteúdo do Aplicativo, incluindo código-fonte, design, logotipo, texto e funcionalidades, é de propriedade exclusiva do desenvolvedor e está protegido pelas leis de direitos autorais e propriedade intelectual aplicáveis. Estes Termos não concedem ao usuário nenhum direito sobre a propriedade intelectual do Aplicativo além da licença limitada de uso descrita aqui.</p>
 
-      <h2 class="c2"><span class="c3">10. Isenção de Garantias</span></h2>
-      <p class="c7"><span class="c1">O Aplicativo é fornecido "no estado em que se encontra" e "conforme disponível", sem garantias de qualquer tipo, expressas ou implícitas. O desenvolvedor não garante que o Aplicativo será ininterrupto, livre de erros ou que os resultados obtidos por seu uso serão precisos ou confiáveis.</span></p>
-      <p class="c7"><span class="c1">Julius é uma ferramenta de apoio ao controle financeiro pessoal. Não constitui aconselhamento financeiro, contábil ou jurídico.</span></p>
-      <p class="c0"><span class="c1"></span></p>
+    <h3>10. Isenção de Garantias</h3>
+    <p>O Aplicativo é fornecido "no estado em que se encontra" e "conforme disponível", sem garantias de qualquer tipo, expressas ou implícitas. O desenvolvedor não garante que o Aplicativo será ininterrupto, livre de erros ou que os resultados obtidos por seu uso serão precisos ou confiáveis.</p>
+    <p>Julius é uma ferramenta de apoio ao controle financeiro pessoal. Não constitui aconselhamento financeiro, contábil ou jurídico.</p>
 
-      <h2 class="c2"><span class="c3">11. Limitação de Responsabilidade</span></h2>
-      <p class="c7"><span class="c1">Na máxima extensão permitida pela lei aplicável, o desenvolvedor não será responsável por quaisquer danos diretos, indiretos, incidentais, especiais ou consequenciais resultantes do uso ou da impossibilidade de uso do Aplicativo, incluindo perda de dados financeiros ou decisões tomadas com base nas informações exibidas pelo Aplicativo.</span></p>
-      <p class="c0"><span class="c1"></span></p>
+    <h3>11. Limitação de Responsabilidade</h3>
+    <p>Na máxima extensão permitida pela lei aplicável, o desenvolvedor não será responsável por quaisquer danos diretos, indiretos, incidentais, especiais ou consequenciais resultantes do uso ou da impossibilidade de uso do Aplicativo, incluindo perda de dados financeiros ou decisões tomadas com base nas informações exibidas pelo Aplicativo.</p>
 
-      <h2 class="c2"><span class="c3">12. Modificações</span></h2>
-      <p class="c7"><span class="c1">O desenvolvedor reserva-se o direito de modificar estes Termos a qualquer momento. Alterações significativas serão comunicadas por meio de notificação no Aplicativo ou por e-mail. O uso continuado do Aplicativo após a notificação constitui aceitação dos novos Termos.</span></p>
-      <p class="c0"><span class="c1"></span></p>
+    <h3>12. Modificações</h3>
+    <p>O desenvolvedor reserva-se o direito de modificar estes Termos a qualquer momento. Alterações significativas serão comunicadas por meio de notificação no Aplicativo ou por e-mail. O uso continuado do Aplicativo após a notificação constitui aceitação dos novos Termos.</p>
 
-      <h2 class="c2"><span class="c3">13. Rescisão</span></h2>
-      <p class="c7"><span class="c1">O desenvolvedor pode suspender ou encerrar seu acesso ao Aplicativo a qualquer momento, caso você viole estes Termos. Você pode encerrar seu uso do Aplicativo a qualquer momento desinstalando-o do seu dispositivo.</span></p>
-      <p class="c0"><span class="c1"></span></p>
+    <h3>13. Rescisão</h3>
+    <p>O desenvolvedor pode suspender ou encerrar seu acesso ao Aplicativo a qualquer momento, caso você viole estes Termos. Você pode encerrar seu uso do Aplicativo a qualquer momento desinstalando-o do seu dispositivo.</p>
 
-      <h2 class="c2"><span class="c3">14. Lei Aplicável</span></h2>
-      <p class="c7"><span class="c1">Estes Termos são regidos pelas leis da República Federativa do Brasil. Qualquer disputa decorrente destes Termos será submetida ao foro da comarca de domicílio do usuário, conforme o Código de Defesa do Consumidor (Lei nº 8.078/1990).</span></p>
-      <p class="c0"><span class="c1"></span></p>
+    <h3>14. Lei Aplicável</h3>
+    <p>Estes Termos são regidos pelas leis da República Federativa do Brasil. Qualquer disputa decorrente destes Termos será submetida ao foro da comarca de domicílio do usuário, conforme o Código de Defesa do Consumidor (Lei nº 8.078/1990).</p>
 
-      <h2 class="c2"><span class="c3">15. Contato</span></h2>
-      <p class="c7"><span class="c1">Para dúvidas, sugestões ou reclamações relacionadas a estes Termos ou ao Aplicativo, entre em contato:</span></p>
-      <p class="c7"><span class="c8">E-mail:</span><span class="c1"> marcusviniciusbp@gmail.com</span></p>
-    </div>
+    <h3>15. Contato</h3>
+    <p>Para dúvidas, sugestões ou reclamações relacionadas a estes Termos ou ao Aplicativo, entre em contato:</p>
+    <div class="contact-block"><strong>E-mail:</strong> <a href="mailto:marcusviniciusbp@gmail.com">marcusviniciusbp@gmail.com</a></div>
+  </section>
 
-    <!-- English Content -->
-    <div id="content-en" class="language-content">
-      <h1 class="title">Terms and Conditions — Julius</h1>
-      <p class="c7"><span class="c8">Last updated:</span><span class="c1"> April 17, 2026</span></p>
-      <p class="c0"><span class="c1"></span></p>
+  <!-- ───────────── ENGLISH ───────────── -->
+  <section class="lang-section" id="en">
+    <h2>English</h2>
 
-      <h2 class="c2"><span class="c3">1. Acceptance of Terms</span></h2>
-      <p class="c7"><span class="c1">By downloading, installing, or using the Julius application ("App"), you agree to these Terms and Conditions ("Terms"). If you do not agree with these Terms, do not use the App.</span></p>
-      <p class="c0"><span class="c1"></span></p>
+    <h3>1. Acceptance of Terms</h3>
+    <p>By downloading, installing, or using the Julius application ("App"), you agree to these Terms and Conditions ("Terms"). If you do not agree with these Terms, do not use the App.</p>
 
-      <h2 class="c2"><span class="c3">2. About the App</span></h2>
-      <p class="c7"><span class="c1">Julius is a personal budget management app that allows users to log expenses, set monthly limits, and track daily financial performance. The App is offered free of charge, with additional features available through a paid subscription ("Julius Pro").</span></p>
-      <p class="c0"><span class="c1"></span></p>
+    <h3>2. About the App</h3>
+    <p>Julius is a personal budget management app that allows users to log expenses, set monthly limits, and track daily financial performance. The App is offered free of charge, with additional features available through a paid subscription ("Julius Pro").</p>
 
-      <h2 class="c2"><span class="c3">3. Permitted Use</span></h2>
-      <p class="c7"><span class="c1">You agree to use the App only for personal, non-commercial purposes, in compliance with these Terms and all applicable laws and regulations. You may not:</span></p>
-      <ul class="c5">
-        <li class="c6"><span class="c1">Reproduce, modify, distribute, or create derivative works of the App without express authorization;</span></li>
-        <li class="c6"><span class="c1">Attempt to access, modify, or interfere with the App's servers or infrastructure;</span></li>
-        <li class="c6"><span class="c1">Use the App for any illegal or unauthorized purpose;</span></li>
-        <li class="c6"><span class="c1">Reverse engineer, decompile, or disassemble the App.</span></li>
-      </ul>
-      <p class="c0"><span class="c1"></span></p>
+    <h3>3. Permitted Use</h3>
+    <p>You agree to use the App only for personal, non-commercial purposes, in compliance with these Terms and all applicable laws and regulations. You may not:</p>
+    <ul>
+      <li>Reproduce, modify, distribute, or create derivative works of the App without express authorization;</li>
+      <li>Attempt to access, modify, or interfere with the App's servers or infrastructure;</li>
+      <li>Use the App for any illegal or unauthorized purpose;</li>
+      <li>Reverse engineer, decompile, or disassemble the App.</li>
+    </ul>
 
-      <h2 class="c2"><span class="c3">4. Account and Authentication</span></h2>
-      <p class="c7"><span class="c1">The App offers optional authentication via Google Sign-In, integrated with Firebase Authentication. You are responsible for maintaining the confidentiality of your credentials and for all activities conducted through your account. If you identify unauthorized use, contact us immediately at the email address provided in the Contact section.</span></p>
-      <p class="c7"><span class="c1">Authentication is optional. Without login, data is stored locally on the device and not synced to the cloud.</span></p>
-      <p class="c0"><span class="c1"></span></p>
+    <h3>4. Account and Authentication</h3>
+    <p>The App offers optional authentication via Google Sign-In, integrated with Firebase Authentication. You are responsible for maintaining the confidentiality of your credentials and for all activities conducted through your account. If you identify unauthorized use, contact us immediately at the email address provided in the Contact section.</p>
+    <p>Authentication is optional. Without login, data is stored locally on the device and not synced to the cloud.</p>
 
-      <h2 class="c2"><span class="c3">5. Julius Pro Subscription</span></h2>
-      <p class="c7"><span class="c1">Julius Pro provides premium features accessible through a paid subscription. The following conditions apply:</span></p>
-      <p class="c7"><span class="c8">5.1 Available plans:</span><span class="c1"> Monthly, Annual, and Lifetime. Prices are displayed in the App and may vary by region.</span></p>
-      <p class="c7"><span class="c8">5.2 Billing:</span><span class="c1"> Payment is processed by the Apple App Store or Google Play Store, depending on the platform used. Billing occurs at the time of purchase confirmation.</span></p>
-      <p class="c7"><span class="c8">5.3 Automatic renewal:</span><span class="c1"> Monthly and annual subscriptions renew automatically at the end of each period, unless canceled by the user at least 24 hours before the end of the current period.</span></p>
-      <p class="c7"><span class="c8">5.4 Cancellation:</span><span class="c1"> You may cancel your subscription at any time through your account settings in the App Store or Google Play. Cancellation takes effect at the end of the already paid period, with no partial refund.</span></p>
-      <p class="c7"><span class="c8">5.5 Refunds:</span><span class="c1"> Refund requests must be made directly to Apple or Google, in accordance with each store's policy. The App developer does not process refunds directly.</span></p>
-      <p class="c7"><span class="c8">5.6 Free trial:</span><span class="c1"> When available, free trial periods automatically convert to a paid subscription at the end, unless canceled before the trial period expires.</span></p>
-      <p class="c0"><span class="c1"></span></p>
+    <h3>5. Julius Pro Subscription</h3>
+    <p>Julius Pro provides premium features accessible through a paid subscription. The following conditions apply:</p>
+    <p class="clause"><strong>5.1 Available plans:</strong> Monthly, Annual, and Lifetime. Prices are displayed in the App and may vary by region.</p>
+    <p class="clause"><strong>5.2 Billing:</strong> Payment is processed by the Apple App Store or Google Play Store, depending on the platform used. Billing occurs at the time of purchase confirmation.</p>
+    <p class="clause"><strong>5.3 Automatic renewal:</strong> Monthly and annual subscriptions renew automatically at the end of each period, unless canceled by the user at least 24 hours before the end of the current period.</p>
+    <p class="clause"><strong>5.4 Cancellation:</strong> You may cancel your subscription at any time through your account settings in the App Store or Google Play. Cancellation takes effect at the end of the already paid period, with no partial refund.</p>
+    <p class="clause"><strong>5.5 Refunds:</strong> Refund requests must be made directly to Apple or Google, in accordance with each store's policy. The App developer does not process refunds directly.</p>
+    <p class="clause"><strong>5.6 Free trial:</strong> New users receive 7 days of free access to Julius Pro upon starting the trial in the App. At the end of the period, premium access ends and the user may choose to subscribe to one of the available plans. The trial period does <strong>not</strong> automatically convert to a paid subscription. Each account may use the free trial period only once.</p>
 
-      <h2 class="c2"><span class="c3">6. Cloud Sync and Data</span></h2>
-      <p class="c7"><span class="c1">The cloud synchronization feature is optional and requires explicit activation by the user. When enabled:</span></p>
-      <ul class="c5">
-        <li class="c6"><span class="c1">Expense data is stored in Firebase Firestore, operated by Google LLC;</span></li>
-        <li class="c6"><span class="c1">Data is linked to your Google account and can be accessed across multiple devices;</span></li>
-        <li class="c6"><span class="c1">You may disable sync at any time in the App's settings.</span></li>
-      </ul>
-      <p class="c7"><span class="c1">Without sync enabled, all data remains exclusively on the local device.</span></p>
-      <p class="c0"><span class="c1"></span></p>
+    <h3>6. Cloud Sync and Data</h3>
+    <p>The cloud synchronization feature is optional and requires explicit activation by the user. When enabled:</p>
+    <ul>
+      <li>Expense data is stored in Firebase Firestore, operated by Google LLC;</li>
+      <li>Data is linked to your Google account and can be accessed across multiple devices;</li>
+      <li>You may disable sync at any time in the App's settings.</li>
+    </ul>
+    <p>Without sync enabled, all data remains exclusively on the local device.</p>
 
-      <h2 class="c2"><span class="c3">7. Advertising</span></h2>
-      <p class="c7"><span class="c1">The free version of the App may display advertisements provided by Google AdMob. By using the free version, you consent to the display of these ads. A Julius Pro subscription removes all advertisements.</span></p>
-      <p class="c0"><span class="c1"></span></p>
+    <h3>7. Advertising</h3>
+    <p>The free version of the App may display advertisements provided by Google AdMob. By using the free version, you consent to the display of these ads. A Julius Pro subscription removes all advertisements.</p>
 
-      <h2 class="c2"><span class="c3">8. Privacy</span></h2>
-      <p class="c7"><span class="c1">Use of the App is subject to our Privacy Policy, which describes how we collect, use, and protect your personal information. By using the App, you consent to the practices described in the Privacy Policy.</span></p>
-      <p class="c7"><span class="c8">Data collected includes:</span></p>
-      <ul class="c5">
-        <li class="c6"><span class="c1">Expense data entered by the user (stored locally and, optionally, in the cloud);</span></li>
-        <li class="c6"><span class="c1">Google account identifier (when login is used);</span></li>
-        <li class="c6"><span class="c1">Usage and diagnostic data for App improvement (via Firebase Analytics);</span></li>
-        <li class="c6"><span class="c1">Advertising data (via Google AdMob, in the free version).</span></li>
-      </ul>
-      <p class="c7"><span class="c1">The App does not sell personal data to third parties.</span></p>
-      <p class="c0"><span class="c1"></span></p>
+    <h3>8. Privacy</h3>
+    <p>Use of the App is subject to our Privacy Policy, which describes how we collect, use, and protect your personal information. By using the App, you consent to the practices described in the Privacy Policy.</p>
+    <p><strong>Data collected includes:</strong></p>
+    <ul>
+      <li>Expense data entered by the user (stored locally and, optionally, in the cloud);</li>
+      <li>Google account identifier (when login is used);</li>
+      <li>Usage and diagnostic data for App improvement (via Firebase Analytics);</li>
+      <li>Advertising data (via Google AdMob, in the free version).</li>
+    </ul>
+    <p>The App does not sell personal data to third parties.</p>
 
-      <h2 class="c2"><span class="c3">9. Intellectual Property</span></h2>
-      <p class="c7"><span class="c1">All content in the App, including source code, design, logo, text, and features, is the exclusive property of the developer and is protected by applicable copyright and intellectual property laws. These Terms do not grant the user any rights over the App's intellectual property beyond the limited license of use described herein.</span></p>
-      <p class="c0"><span class="c1"></span></p>
+    <h3>9. Intellectual Property</h3>
+    <p>All content in the App, including source code, design, logo, text, and features, is the exclusive property of the developer and is protected by applicable copyright and intellectual property laws. These Terms do not grant the user any rights over the App's intellectual property beyond the limited license of use described herein.</p>
 
-      <h2 class="c2"><span class="c3">10. Disclaimer of Warranties</span></h2>
-      <p class="c7"><span class="c1">The App is provided "as is" and "as available," without warranties of any kind, express or implied. The developer does not guarantee that the App will be uninterrupted, error-free, or that the results obtained from its use will be accurate or reliable.</span></p>
-      <p class="c7"><span class="c1">Julius is a personal financial management support tool. It does not constitute financial, accounting, or legal advice.</span></p>
-      <p class="c0"><span class="c1"></span></p>
+    <h3>10. Disclaimer of Warranties</h3>
+    <p>The App is provided "as is" and "as available," without warranties of any kind, express or implied. The developer does not guarantee that the App will be uninterrupted, error-free, or that the results obtained from its use will be accurate or reliable.</p>
+    <p>Julius is a personal financial management support tool. It does not constitute financial, accounting, or legal advice.</p>
 
-      <h2 class="c2"><span class="c3">11. Limitation of Liability</span></h2>
-      <p class="c7"><span class="c1">To the maximum extent permitted by applicable law, the developer shall not be liable for any direct, indirect, incidental, special, or consequential damages resulting from the use or inability to use the App, including loss of financial data or decisions made based on information displayed by the App.</span></p>
-      <p class="c0"><span class="c1"></span></p>
+    <h3>11. Limitation of Liability</h3>
+    <p>To the maximum extent permitted by applicable law, the developer shall not be liable for any direct, indirect, incidental, special, or consequential damages resulting from the use or inability to use the App, including loss of financial data or decisions made based on information displayed by the App.</p>
 
-      <h2 class="c2"><span class="c3">12. Modifications</span></h2>
-      <p class="c7"><span class="c1">The developer reserves the right to modify these Terms at any time. Significant changes will be communicated through a notification in the App or by email. Continued use of the App after notification constitutes acceptance of the new Terms.</span></p>
-      <p class="c0"><span class="c1"></span></p>
+    <h3>12. Modifications</h3>
+    <p>The developer reserves the right to modify these Terms at any time. Significant changes will be communicated through a notification in the App or by email. Continued use of the App after notification constitutes acceptance of the new Terms.</p>
 
-      <h2 class="c2"><span class="c3">13. Termination</span></h2>
-      <p class="c7"><span class="c1">The developer may suspend or terminate your access to the App at any time if you violate these Terms. You may terminate your use of the App at any time by uninstalling it from your device.</span></p>
-      <p class="c0"><span class="c1"></span></p>
+    <h3>13. Termination</h3>
+    <p>The developer may suspend or terminate your access to the App at any time if you violate these Terms. You may terminate your use of the App at any time by uninstalling it from your device.</p>
 
-      <h2 class="c2"><span class="c3">14. Governing Law</span></h2>
-      <p class="c7"><span class="c1">These Terms are governed by the laws of the Federative Republic of Brazil. For users located in other jurisdictions, applicable local consumer protection laws may also apply. Any dispute arising from these Terms will be subject to the jurisdiction of the user's place of domicile.</span></p>
-      <p class="c0"><span class="c1"></span></p>
+    <h3>14. Governing Law</h3>
+    <p>These Terms are governed by the laws of the Federative Republic of Brazil. For users located in other jurisdictions, applicable local consumer protection laws may also apply. Any dispute arising from these Terms will be subject to the jurisdiction of the user's place of domicile.</p>
 
-      <h2 class="c2"><span class="c3">15. Contact</span></h2>
-      <p class="c7"><span class="c1">For questions, suggestions, or complaints related to these Terms or the App, please contact:</span></p>
-      <p class="c7"><span class="c8">Email:</span><span class="c1"> marcusviniciusbp@gmail.com</span></p>
-    </div>
+    <h3>15. Contact</h3>
+    <p>For questions, suggestions, or complaints related to these Terms or the App, please contact:</p>
+    <div class="contact-block"><strong>Email:</strong> <a href="mailto:marcusviniciusbp@gmail.com">marcusviniciusbp@gmail.com</a></div>
+  </section>
 
-    <!-- Spanish Content -->
-    <div id="content-es" class="language-content">
-      <h1 class="title">Términos y Condiciones — Julius</h1>
-      <p class="c7"><span class="c8">Última actualización:</span><span class="c1"> 17 de abril de 2026</span></p>
-      <p class="c0"><span class="c1"></span></p>
+  <!-- ───────────── ESPAÑOL ───────────── -->
+  <section class="lang-section" id="es">
+    <h2>Español</h2>
 
-      <h2 class="c2"><span class="c3">1. Aceptación de los Términos</span></h2>
-      <p class="c7"><span class="c1">Al descargar, instalar o usar la aplicación Julius ("Aplicación"), aceptas estos Términos y Condiciones ("Términos"). Si no estás de acuerdo con estos Términos, no utilices la Aplicación.</span></p>
-      <p class="c0"><span class="c1"></span></p>
+    <h3>1. Aceptación de los Términos</h3>
+    <p>Al descargar, instalar o usar la aplicación Julius ("Aplicación"), aceptas estos Términos y Condiciones ("Términos"). Si no estás de acuerdo con estos Términos, no utilices la Aplicación.</p>
 
-      <h2 class="c2"><span class="c3">2. Sobre la Aplicación</span></h2>
-      <p class="c7"><span class="c1">Julius es una aplicación de control de presupuesto personal que permite al usuario registrar gastos, establecer límites mensuales y hacer seguimiento de su desempeño financiero diario. La Aplicación se ofrece de forma gratuita, con funciones adicionales disponibles mediante suscripción de pago ("Julius Pro").</span></p>
-      <p class="c0"><span class="c1"></span></p>
+    <h3>2. Sobre la Aplicación</h3>
+    <p>Julius es una aplicación de control de presupuesto personal que permite al usuario registrar gastos, establecer límites mensuales y hacer seguimiento de su desempeño financiero diario. La Aplicación se ofrece de forma gratuita, con funciones adicionales disponibles mediante suscripción de pago ("Julius Pro").</p>
 
-      <h2 class="c2"><span class="c3">3. Uso Permitido</span></h2>
-      <p class="c7"><span class="c1">Aceptas usar la Aplicación únicamente con fines personales y no comerciales, en cumplimiento de estos Términos y de todas las leyes y regulaciones aplicables. Está prohibido:</span></p>
-      <ul class="c5">
-        <li class="c6"><span class="c1">Reproducir, modificar, distribuir o crear obras derivadas de la Aplicación sin autorización expresa;</span></li>
-        <li class="c6"><span class="c1">Intentar acceder, modificar o interferir en los servidores o la infraestructura de la Aplicación;</span></li>
-        <li class="c6"><span class="c1">Usar la Aplicación para cualquier finalidad ilegal o no autorizada;</span></li>
-        <li class="c6"><span class="c1">Realizar ingeniería inversa, descompilar o desensamblar la Aplicación.</span></li>
-      </ul>
-      <p class="c0"><span class="c1"></span></p>
+    <h3>3. Uso Permitido</h3>
+    <p>Aceptas usar la Aplicación únicamente con fines personales y no comerciales, en cumplimiento de estos Términos y de todas las leyes y regulaciones aplicables. Está prohibido:</p>
+    <ul>
+      <li>Reproducir, modificar, distribuir o crear obras derivadas de la Aplicación sin autorización expresa;</li>
+      <li>Intentar acceder, modificar o interferir en los servidores o la infraestructura de la Aplicación;</li>
+      <li>Usar la Aplicación para cualquier finalidad ilegal o no autorizada;</li>
+      <li>Realizar ingeniería inversa, descompilar o desensamblar la Aplicación.</li>
+    </ul>
 
-      <h2 class="c2"><span class="c3">4. Cuenta y Autenticación</span></h2>
-      <p class="c7"><span class="c1">La Aplicación ofrece autenticación opcional mediante Google Sign-In, integrada con Firebase Authentication. Eres responsable de mantener la confidencialidad de tus credenciales y de todas las actividades realizadas con tu cuenta. Si identificas un uso no autorizado, contáctanos de inmediato en el correo electrónico indicado en la sección de Contacto.</span></p>
-      <p class="c7"><span class="c1">La autenticación es opcional. Sin inicio de sesión, los datos se almacenan localmente en el dispositivo y no se sincronizan con la nube.</span></p>
-      <p class="c0"><span class="c1"></span></p>
+    <h3>4. Cuenta y Autenticación</h3>
+    <p>La Aplicación ofrece autenticación opcional mediante Google Sign-In, integrada con Firebase Authentication. Eres responsable de mantener la confidencialidad de tus credenciales y de todas las actividades realizadas con tu cuenta. Si identificas un uso no autorizado, contáctanos de inmediato en el correo electrónico indicado en la sección de Contacto.</p>
+    <p>La autenticación es opcional. Sin inicio de sesión, los datos se almacenan localmente en el dispositivo y no se sincronizan con la nube.</p>
 
-      <h2 class="c2"><span class="c3">5. Suscripción Julius Pro</span></h2>
-      <p class="c7"><span class="c1">Julius Pro ofrece funciones premium accesibles mediante suscripción de pago. Se aplican las siguientes condiciones:</span></p>
-      <p class="c7"><span class="c8">5.1 Planes disponibles:</span><span class="c1"> Mensual, Anual y Vitalicio. Los precios se muestran en la Aplicación y pueden variar por región.</span></p>
-      <p class="c7"><span class="c8">5.2 Facturación:</span><span class="c1"> El pago es procesado por la Apple App Store o Google Play Store, según la plataforma utilizada. La facturación se realiza en el momento de la confirmación de la compra.</span></p>
-      <p class="c7"><span class="c8">5.3 Renovación automática:</span><span class="c1"> Las suscripciones mensuales y anuales se renuevan automáticamente al final de cada período, salvo cancelación por parte del usuario con al menos 24 horas de antelación al final del período vigente.</span></p>
-      <p class="c7"><span class="c8">5.4 Cancelación:</span><span class="c1"> Puedes cancelar tu suscripción en cualquier momento a través de la configuración de tu cuenta en la App Store o Google Play. La cancelación entrará en vigor al final del período ya pagado, sin reembolso proporcional.</span></p>
-      <p class="c7"><span class="c8">5.5 Reembolsos:</span><span class="c1"> Las solicitudes de reembolso deben realizarse directamente a Apple o Google, de acuerdo con la política de cada tienda. El desarrollador de la Aplicación no procesa reembolsos directamente.</span></p>
-      <p class="c7"><span class="c8">5.6 Período de prueba:</span><span class="c1"> Cuando esté disponible, el período de prueba gratuito se convierte automáticamente en una suscripción de pago al finalizar, salvo cancelación antes del término del período de prueba.</span></p>
-      <p class="c0"><span class="c1"></span></p>
+    <h3>5. Suscripción Julius Pro</h3>
+    <p>Julius Pro ofrece funciones premium accesibles mediante suscripción de pago. Se aplican las siguientes condiciones:</p>
+    <p class="clause"><strong>5.1 Planes disponibles:</strong> Mensual, Anual y Vitalicio. Los precios se muestran en la Aplicación y pueden variar por región.</p>
+    <p class="clause"><strong>5.2 Facturación:</strong> El pago es procesado por la Apple App Store o Google Play Store, según la plataforma utilizada. La facturación se realiza en el momento de la confirmación de la compra.</p>
+    <p class="clause"><strong>5.3 Renovación automática:</strong> Las suscripciones mensuales y anuales se renuevan automáticamente al final de cada período, salvo cancelación por parte del usuario con al menos 24 horas de antelación al final del período vigente.</p>
+    <p class="clause"><strong>5.4 Cancelación:</strong> Puedes cancelar tu suscripción en cualquier momento a través de la configuración de tu cuenta en la App Store o Google Play. La cancelación entrará en vigor al final del período ya pagado, sin reembolso proporcional.</p>
+    <p class="clause"><strong>5.5 Reembolsos:</strong> Las solicitudes de reembolso deben realizarse directamente a Apple o Google, de acuerdo con la política de cada tienda. El desarrollador de la Aplicación no procesa reembolsos directamente.</p>
+    <p class="clause"><strong>5.6 Período de prueba gratuito:</strong> Los nuevos usuarios reciben 7 días de acceso gratuito a Julius Pro al iniciar la prueba en la Aplicación. Al finalizar el período, el acceso premium se cierra y el usuario puede optar por suscribirse a uno de los planes disponibles. El período de prueba <strong>no</strong> se convierte automáticamente en una suscripción de pago. Cada cuenta puede utilizar el período de prueba gratuito una sola vez.</p>
 
-      <h2 class="c2"><span class="c3">6. Sincronización en la Nube y Datos</span></h2>
-      <p class="c7"><span class="c1">La función de sincronización en la nube es opcional y requiere activación explícita por parte del usuario. Cuando está habilitada:</span></p>
-      <ul class="c5">
-        <li class="c6"><span class="c1">Los datos de gastos se almacenan en Firebase Firestore, operado por Google LLC;</span></li>
-        <li class="c6"><span class="c1">Los datos están vinculados a tu cuenta de Google y pueden ser accedidos desde múltiples dispositivos;</span></li>
-        <li class="c6"><span class="c1">Puedes desactivar la sincronización en cualquier momento desde la configuración de la Aplicación.</span></li>
-      </ul>
-      <p class="c7"><span class="c1">Sin la sincronización habilitada, todos los datos permanecen exclusivamente en el dispositivo local.</span></p>
-      <p class="c0"><span class="c1"></span></p>
+    <h3>6. Sincronización en la Nube y Datos</h3>
+    <p>La función de sincronización en la nube es opcional y requiere activación explícita por parte del usuario. Cuando está habilitada:</p>
+    <ul>
+      <li>Los datos de gastos se almacenan en Firebase Firestore, operado por Google LLC;</li>
+      <li>Los datos están vinculados a tu cuenta de Google y pueden ser accedidos desde múltiples dispositivos;</li>
+      <li>Puedes desactivar la sincronización en cualquier momento desde la configuración de la Aplicación.</li>
+    </ul>
+    <p>Sin la sincronización habilitada, todos los datos permanecen exclusivamente en el dispositivo local.</p>
 
-      <h2 class="c2"><span class="c3">7. Publicidad</span></h2>
-      <p class="c7"><span class="c1">La versión gratuita de la Aplicación puede mostrar anuncios proporcionados por Google AdMob. Al usar la versión gratuita, consientes la visualización de dichos anuncios. La suscripción Julius Pro elimina todos los anuncios.</span></p>
-      <p class="c0"><span class="c1"></span></p>
+    <h3>7. Publicidad</h3>
+    <p>La versión gratuita de la Aplicación puede mostrar anuncios proporcionados por Google AdMob. Al usar la versión gratuita, consientes la visualización de dichos anuncios. La suscripción Julius Pro elimina todos los anuncios.</p>
 
-      <h2 class="c2"><span class="c3">8. Privacidad</span></h2>
-      <p class="c7"><span class="c1">El uso de la Aplicación está sujeto a nuestra Política de Privacidad, que describe cómo recopilamos, usamos y protegemos tu información personal. Al usar la Aplicación, consientes las prácticas descritas en la Política de Privacidad.</span></p>
-      <p class="c7"><span class="c8">Los datos recopilados incluyen:</span></p>
-      <ul class="c5">
-        <li class="c6"><span class="c1">Datos de gastos ingresados por el usuario (almacenados localmente y, opcionalmente, en la nube);</span></li>
-        <li class="c6"><span class="c1">Identificador de cuenta de Google (cuando se utiliza el inicio de sesión);</span></li>
-        <li class="c6"><span class="c1">Datos de uso y diagnóstico para la mejora de la Aplicación (a través de Firebase Analytics);</span></li>
-        <li class="c6"><span class="c1">Datos publicitarios (a través de Google AdMob, en la versión gratuita).</span></li>
-      </ul>
-      <p class="c7"><span class="c1">La Aplicación no vende datos personales a terceros.</span></p>
-      <p class="c0"><span class="c1"></span></p>
+    <h3>8. Privacidad</h3>
+    <p>El uso de la Aplicación está sujeto a nuestra Política de Privacidad, que describe cómo recopilamos, usamos y protegemos tu información personal. Al usar la Aplicación, consientes las prácticas descritas en la Política de Privacidad.</p>
+    <p><strong>Los datos recopilados incluyen:</strong></p>
+    <ul>
+      <li>Datos de gastos ingresados por el usuario (almacenados localmente y, opcionalmente, en la nube);</li>
+      <li>Identificador de cuenta de Google (cuando se utiliza el inicio de sesión);</li>
+      <li>Datos de uso y diagnóstico para la mejora de la Aplicación (a través de Firebase Analytics);</li>
+      <li>Datos publicitarios (a través de Google AdMob, en la versión gratuita).</li>
+    </ul>
+    <p>La Aplicación no vende datos personales a terceros.</p>
 
-      <h2 class="c2"><span class="c3">9. Propiedad Intelectual</span></h2>
-      <p class="c7"><span class="c1">Todo el contenido de la Aplicación, incluidos el código fuente, diseño, logotipo, texto y funcionalidades, es propiedad exclusiva del desarrollador y está protegido por las leyes de derechos de autor y propiedad intelectual aplicables. Estos Términos no otorgan al usuario ningún derecho sobre la propiedad intelectual de la Aplicación más allá de la licencia limitada de uso aquí descrita.</span></p>
-      <p class="c0"><span class="c1"></span></p>
+    <h3>9. Propiedad Intelectual</h3>
+    <p>Todo el contenido de la Aplicación, incluidos el código fuente, diseño, logotipo, texto y funcionalidades, es propiedad exclusiva del desarrollador y está protegido por las leyes de derechos de autor y propiedad intelectual aplicables. Estos Términos no otorgan al usuario ningún derecho sobre la propiedad intelectual de la Aplicación más allá de la licencia limitada de uso aquí descrita.</p>
 
-      <h2 class="c2"><span class="c3">10. Exención de Garantías</span></h2>
-      <p class="c7"><span class="c1">La Aplicación se proporciona "tal cual" y "según disponibilidad", sin garantías de ningún tipo, expresas o implícitas. El desarrollador no garantiza que la Aplicación sea ininterrumpida, libre de errores, ni que los resultados obtenidos de su uso sean precisos o confiables.</span></p>
-      <p class="c7"><span class="c1">Julius es una herramienta de apoyo al control financiero personal. No constituye asesoramiento financiero, contable ni jurídico.</span></p>
-      <p class="c0"><span class="c1"></span></p>
+    <h3>10. Exención de Garantías</h3>
+    <p>La Aplicación se proporciona "tal cual" y "según disponibilidad", sin garantías de ningún tipo, expresas o implícitas. El desarrollador no garantiza que la Aplicación sea ininterrumpida, libre de errores, ni que los resultados obtenidos de su uso sean precisos o confiables.</p>
+    <p>Julius es una herramienta de apoyo al control financiero personal. No constituye asesoramiento financiero, contable ni jurídico.</p>
 
-      <h2 class="c2"><span class="c3">11. Limitación de Responsabilidad</span></h2>
-      <p class="c7"><span class="c1">En la máxima medida permitida por la ley aplicable, el desarrollador no será responsable de ningún daño directo, indirecto, incidental, especial o consecuente derivado del uso o la imposibilidad de uso de la Aplicación, incluida la pérdida de datos financieros o decisiones tomadas con base en la información mostrada por la Aplicación.</span></p>
-      <p class="c0"><span class="c1"></span></p>
+    <h3>11. Limitación de Responsabilidad</h3>
+    <p>En la máxima medida permitida por la ley aplicable, el desarrollador no será responsable de ningún daño directo, indirecto, incidental, especial o consecuente derivado del uso o la imposibilidad de uso de la Aplicación, incluida la pérdida de datos financieros o decisiones tomadas con base en la información mostrada por la Aplicación.</p>
 
-      <h2 class="c2"><span class="c3">12. Modificaciones</span></h2>
-      <p class="c7"><span class="c1">El desarrollador se reserva el derecho de modificar estos Términos en cualquier momento. Los cambios significativos se comunicarán mediante una notificación en la Aplicación o por correo electrónico. El uso continuado de la Aplicación tras la notificación constituye la aceptación de los nuevos Términos.</span></p>
-      <p class="c0"><span class="c1"></span></p>
+    <h3>12. Modificaciones</h3>
+    <p>El desarrollador se reserva el derecho de modificar estos Términos en cualquier momento. Los cambios significativos se comunicarán mediante una notificación en la Aplicación o por correo electrónico. El uso continuado de la Aplicación tras la notificación constituye la aceptación de los nuevos Términos.</p>
 
-      <h2 class="c2"><span class="c3">13. Rescisión</span></h2>
-      <p class="c7"><span class="c1">El desarrollador puede suspender o cancelar tu acceso a la Aplicación en cualquier momento si incumples estos Términos. Puedes dejar de usar la Aplicación en cualquier momento desinstalándola de tu dispositivo.</span></p>
-      <p class="c0"><span class="c1"></span></p>
+    <h3>13. Rescisión</h3>
+    <p>El desarrollador puede suspender o cancelar tu acceso a la Aplicación en cualquier momento si incumples estos Términos. Puedes dejar de usar la Aplicación en cualquier momento desinstalándola de tu dispositivo.</p>
 
-      <h2 class="c2"><span class="c3">14. Ley Aplicable</span></h2>
-      <p class="c7"><span class="c1">Estos Términos se rigen por las leyes de la República Federativa de Brasil. Para usuarios ubicados en otras jurisdicciones, también pueden aplicarse las leyes locales de protección al consumidor. Cualquier disputa derivada de estos Términos estará sujeta a la jurisdicción del domicilio del usuario.</span></p>
-      <p class="c0"><span class="c1"></span></p>
+    <h3>14. Ley Aplicable</h3>
+    <p>Estos Términos se rigen por las leyes de la República Federativa de Brasil. Para usuarios ubicados en otras jurisdicciones, también pueden aplicarse las leyes locales de protección al consumidor. Cualquier disputa derivada de estos Términos estará sujeta a la jurisdicción del domicilio del usuario.</p>
 
-      <h2 class="c2"><span class="c3">15. Contacto</span></h2>
-      <p class="c7"><span class="c1">Para preguntas, sugerencias o quejas relacionadas con estos Términos o la Aplicación, contáctanos en:</span></p>
-      <p class="c7"><span class="c8">Correo electrónico:</span><span class="c1"> marcusviniciusbp@gmail.com</span></p>
-    </div>
+    <h3>15. Contacto</h3>
+    <p>Para preguntas, sugerencias o quejas relacionadas con estos Términos o la Aplicación, contáctanos en:</p>
+    <div class="contact-block"><strong>Correo electrónico:</strong> <a href="mailto:marcusviniciusbp@gmail.com">marcusviniciusbp@gmail.com</a></div>
+  </section>
 
-  </div>
-
-  <script>
-    function switchLanguage(lang, event) {
-      const contents = document.querySelectorAll('.language-content');
-      contents.forEach(content => content.classList.remove('active'));
-
-      const tabs = document.querySelectorAll('.language-tab');
-      tabs.forEach(tab => tab.classList.remove('active'));
-
-      document.getElementById('content-' + lang).classList.add('active');
-      event.target.classList.add('active');
-    }
-  </script>
+</div>
 </body>
-
 </html>

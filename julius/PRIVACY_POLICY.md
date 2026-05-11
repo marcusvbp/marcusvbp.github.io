@@ -1,6 +1,6 @@
 # Política de Privacidade — Julius
 
-**Última atualização:** 17 de abril de 2026
+**Última atualização:** 4 de maio de 2026
 
 ---
 
@@ -33,6 +33,7 @@ Esta Política de Privacidade descreve como o aplicativo Julius ("Aplicativo") c
 
 #### 2.5 Dados de assinatura
 - Informações de compra e status de assinatura gerenciados pelo RevenueCat. O Aplicativo não armazena dados de cartão de crédito ou informações de pagamento — essas informações são processadas exclusivamente pela Apple App Store ou Google Play Store.
+- Data e hora de início do período de avaliação gratuita, armazenada no Firebase Firestore vinculada ao identificador do usuário, utilizada exclusivamente para gestão e controle do trial.
 
 ### 3. Finalidade do Tratamento
 
@@ -50,10 +51,13 @@ Os dados são coletados e utilizados para as seguintes finalidades:
 ### 4. Armazenamento de Dados
 
 #### 4.1 Armazenamento local
-Por padrão, todos os dados de gastos e configurações são armazenados exclusivamente no dispositivo do usuário, utilizando o armazenamento interno do sistema operacional. O Aplicativo não acessa a rede por padrão.
+Por padrão, todos os dados de gastos e configurações são armazenados exclusivamente no dispositivo do usuário, utilizando o armazenamento interno do sistema operacional. O Aplicativo não acessa a rede de forma contínua por padrão, exceto pela operação pontual descrita na seção 4.3.
 
 #### 4.2 Armazenamento na nuvem (opt-in)
-Quando o usuário ativa a funcionalidade "Sincronização na Nuvem" nas configurações, os dados são enviados e armazenados no Firebase Firestore (Google LLC), com servidores localizados nos Estados Unidos. Essa funcionalidade pode ser desativada a qualquer momento, e os dados na nuvem podem ser excluídos mediante solicitação.
+Quando o usuário ativa a funcionalidade "Sincronização na Nuvem" nas configurações, os dados de gastos são enviados e armazenados no Firebase Firestore (Google LLC), com servidores localizados nos Estados Unidos. Essa funcionalidade pode ser desativada a qualquer momento, e os dados na nuvem podem ser excluídos mediante solicitação.
+
+#### 4.3 Dados de avaliação gratuita
+Ao iniciar o período de avaliação gratuita, o Aplicativo registra automaticamente a data de início no Firebase Firestore, vinculada ao identificador de usuário do Firebase Authentication. Essa operação requer uma conexão temporária à internet e ocorre independentemente da ativação da sincronização na nuvem. O dado registrado é utilizado exclusivamente para controlar o período de avaliação e prevenir uso abusivo (como reinstalação do Aplicativo para obter múltiplos períodos de teste). Nenhum dado financeiro ou de gastos é transmitido nessa operação.
 
 ### 5. Compartilhamento de Dados
 
@@ -140,6 +144,7 @@ This Privacy Policy describes how the Julius application ("App") collects, uses,
 
 #### 2.5 Subscription data
 - Purchase information and subscription status managed by RevenueCat. The App does not store credit card or payment information — this data is processed exclusively by the Apple App Store or Google Play Store.
+- Start date and time of the free trial period, stored in Firebase Firestore linked to the user's identifier, used solely for trial management and control.
 
 ### 3. Purpose of Processing
 
@@ -157,10 +162,13 @@ Data is collected and used for the following purposes:
 ### 4. Data Storage
 
 #### 4.1 Local storage
-By default, all expense data and settings are stored exclusively on the user's device, using the operating system's internal storage. The App does not access the network by default.
+By default, all expense data and settings are stored exclusively on the user's device, using the operating system's internal storage. The App does not continuously access the network by default, except for the one-time operation described in section 4.3.
 
 #### 4.2 Cloud storage (opt-in)
-When the user enables the "Cloud Sync" feature in settings, data is sent to and stored in Firebase Firestore (Google LLC), with servers located in the United States. This feature can be disabled at any time, and cloud data can be deleted upon request.
+When the user enables the "Cloud Sync" feature in settings, expense data is sent to and stored in Firebase Firestore (Google LLC), with servers located in the United States. This feature can be disabled at any time, and cloud data can be deleted upon request.
+
+#### 4.3 Free trial data
+When the free trial period is initiated, the App automatically records the start date in Firebase Firestore, linked to the user's Firebase Authentication identifier. This operation requires a temporary internet connection and occurs regardless of whether cloud sync is enabled. The recorded data is used solely to manage the trial period and prevent abuse (such as reinstalling the App to obtain multiple trial periods). No financial or expense data is transmitted in this operation.
 
 ### 5. Data Sharing
 
@@ -251,6 +259,7 @@ Esta Política de Privacidad describe cómo la aplicación Julius ("Aplicación"
 
 #### 2.5 Datos de suscripción
 - Información de compra y estado de suscripción gestionados por RevenueCat. La Aplicación no almacena datos de tarjeta de crédito ni información de pago — estos datos son procesados exclusivamente por la Apple App Store o Google Play Store.
+- Fecha y hora de inicio del período de prueba gratuito, almacenada en Firebase Firestore vinculada al identificador del usuario, utilizada exclusivamente para la gestión y control del trial.
 
 ### 3. Finalidad del Tratamiento
 
@@ -268,10 +277,13 @@ Los datos se recopilan y utilizan para las siguientes finalidades:
 ### 4. Almacenamiento de Datos
 
 #### 4.1 Almacenamiento local
-Por defecto, todos los datos de gastos y configuraciones se almacenan exclusivamente en el dispositivo del usuario, utilizando el almacenamiento interno del sistema operativo. La Aplicación no accede a la red por defecto.
+Por defecto, todos los datos de gastos y configuraciones se almacenan exclusivamente en el dispositivo del usuario, utilizando el almacenamiento interno del sistema operativo. La Aplicación no accede a la red de forma continua por defecto, salvo por la operación puntual descrita en la sección 4.3.
 
 #### 4.2 Almacenamiento en la nube (opt-in)
-Cuando el usuario activa la función "Sincronización en la Nube" en la configuración, los datos se envían y almacenan en Firebase Firestore (Google LLC), con servidores ubicados en los Estados Unidos. Esta función puede desactivarse en cualquier momento, y los datos en la nube pueden eliminarse mediante solicitud.
+Cuando el usuario activa la función "Sincronización en la Nube" en la configuración, los datos de gastos se envían y almacenan en Firebase Firestore (Google LLC), con servidores ubicados en los Estados Unidos. Esta función puede desactivarse en cualquier momento, y los datos en la nube pueden eliminarse mediante solicitud.
+
+#### 4.3 Datos de período de prueba gratuito
+Al iniciar el período de prueba gratuito, la Aplicación registra automáticamente la fecha de inicio en Firebase Firestore, vinculada al identificador de usuario de Firebase Authentication. Esta operación requiere una conexión temporal a internet y ocurre independientemente de si la sincronización en la nube está activada. El dato registrado se utiliza exclusivamente para gestionar el período de prueba y prevenir el uso abusivo (como reinstalar la Aplicación para obtener múltiples períodos de prueba). Ningún dato financiero o de gastos se transmite en esta operación.
 
 ### 5. Compartición de Datos
 

@@ -1,6 +1,6 @@
 # Termos e Condições de Uso — Julius
 
-**Última atualização:** 17 de abril de 2026
+**Última atualização:** 4 de maio de 2026
 
 ---
 
@@ -43,7 +43,7 @@ O Julius Pro oferece recursos premium acessíveis mediante assinatura paga. As s
 
 **5.5 Reembolsos:** Solicitações de reembolso devem ser feitas diretamente à Apple ou ao Google, conforme a política de cada loja. O desenvolvedor do Aplicativo não processa reembolsos diretamente.
 
-**5.6 Período de teste:** Quando disponível, o período de avaliação gratuito converte-se automaticamente em assinatura paga ao término, salvo cancelamento antes do encerramento do período de teste.
+**5.6 Período de avaliação gratuita:** Novos usuários recebem 7 dias de acesso gratuito ao Julius Pro ao iniciar a avaliação no Aplicativo. Ao término do período, o acesso premium é encerrado e o usuário pode optar por assinar um dos planos disponíveis. O período de avaliação **não** é convertido automaticamente em assinatura paga. Cada conta pode utilizar o período de avaliação uma única vez.
 
 ### 6. Sincronização na Nuvem e Dados
 
@@ -144,7 +144,7 @@ Julius Pro provides premium features accessible through a paid subscription. The
 
 **5.5 Refunds:** Refund requests must be made directly to Apple or Google, in accordance with each store's policy. The App developer does not process refunds directly.
 
-**5.6 Free trial:** When available, free trial periods automatically convert to a paid subscription at the end, unless canceled before the trial period expires.
+**5.6 Free trial:** New users receive 7 days of free access to Julius Pro upon starting the trial in the App. At the end of the period, premium access ends and the user may choose to subscribe to one of the available plans. The trial period does **not** automatically convert to a paid subscription. Each account may use the free trial period only once.
 
 ### 6. Cloud Sync and Data
 
@@ -245,7 +245,7 @@ Julius Pro ofrece funciones premium accesibles mediante suscripción de pago. Se
 
 **5.5 Reembolsos:** Las solicitudes de reembolso deben realizarse directamente a Apple o Google, de acuerdo con la política de cada tienda. El desarrollador de la Aplicación no procesa reembolsos directamente.
 
-**5.6 Período de prueba:** Cuando esté disponible, el período de prueba gratuito se convierte automáticamente en una suscripción de pago al finalizar, salvo cancelación antes del término del período de prueba.
+**5.6 Período de prueba gratuito:** Los nuevos usuarios reciben 7 días de acceso gratuito a Julius Pro al iniciar la prueba en la Aplicación. Al finalizar el período, el acceso premium se cierra y el usuario puede optar por suscribirse a uno de los planes disponibles. El período de prueba **no** se convierte automáticamente en una suscripción de pago. Cada cuenta puede utilizar el período de prueba gratuito una sola vez.
 
 ### 6. Sincronización en la Nube y Datos
 
